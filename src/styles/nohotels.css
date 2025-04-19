@@ -1,0 +1,28 @@
+.no-hotels-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .no-hotels-image {
+    width: 220px;
+    max-width: 90%;
+    margin-bottom: 20px;
+    opacity: 0.85;
+  }
+  
+  .no-hotels-heading {
+    font-size: 24px;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 10px;
+  }
+  
+  .no-hotels-subtext {
+    font-size: 16px;
+    color: #777;
+  }
+  

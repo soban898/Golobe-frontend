@@ -1,0 +1,139 @@
+.footer {
+  background: var(--Mint-Green, #8DD3BB);
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+}
+
+/* Newsletter Section */
+.newsletter {
+  background: #CDEAE1;
+  box-shadow: 0px 4px 16px 0px rgba(17, 34, 17, 0.05);
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 900px;
+  margin: auto;
+  transform: translateY(-64px);
+}
+
+.newsletter-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.text-section {
+  flex: 1;
+  text-align: left;
+}
+
+.image-section img {
+  max-width: 200px;
+}
+
+/* Subscribe Box */
+.subscribe {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.subscribe input {
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.subscribe button {
+  padding: 10px 20px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  background: var(--Blackish-Green, #121);
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Footer Links */
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -35px;
+}
+
+.footer-logo img {
+  width: 100px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 14px;
+  margin-top: 10px;
+  margin-right: 1px;
+}
+
+/* Footer Columns */
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 68px;
+  margin-top: 20px;
+}
+
+.footer-column {
+  text-align: left;
+}
+
+.footer-column h4 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .newsletter-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .subscribe {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .subscribe input {
+    width: 100%;
+  }
+
+  .footer-columns {
+    text-align: center;
+    gap: 30px;
+  }
+
+  .footer-column {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 536px) {
+  .footer-columns {
+    flex-direction: column;
+  }
+  /* .footer{
+    margin-right: -17px;
+  } */
+}

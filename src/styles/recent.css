@@ -1,0 +1,69 @@
+.Recent-search {
+    text-align: center;
+    margin-bottom: 20px; /* Heading aur items ke beech gap */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+  }
+  
+  .Recent-search h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px; /* Thoda extra spacing */
+  }
+  
+  .recent-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Default: 4 items in a row */
+    gap: 40px; /* Adjust spacing */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    width: fit-content; /* Shrink to fit content */
+    margin: 0 auto; /* Center the entire grid */
+}
+
+
+  .recent-item {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Image aur text ke darmiyan gap */
+    width: auto;
+  }
+  
+  .recent-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+  }
+  
+  .places{
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .recent-item-text{
+    font-size: 13px;
+  }
+  /* Responsive: Chhoti screen pe text neeche chala jaye */
+  @media (max-width: 768px) {
+    .recent-item {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .recent-items{
+        gap: 60px;
+    }
+  }
+  
+  @media (max-width: 993px) {
+    .recent-items {
+        grid-template-columns: repeat(2, 1fr); /* 2 items in a row */
+    }
+}
+
+/* @media (max-width: 600px) {
+  .recent-items {
+      grid-template-columns: repeat(1, 1fr); 
+  }
+}
+   */
+  
+  

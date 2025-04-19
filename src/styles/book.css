@@ -1,0 +1,312 @@
+/* .booking-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  .hotel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .hotel-name {
+    font-size: 26px;
+    font-weight: bold;
+  }
+  
+  .hotel-price {
+    font-size: 24px;
+    color: #ff5a5f;
+  }
+  
+  .hotel-details {
+    display: flex;
+    align-items: center;
+    margin-top: -69px;
+    gap: 10px;
+  }
+  
+  .hotel-location {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #555;
+  }
+  
+  .hotel-rating {
+    background-color: #d4edda;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .hotel-images {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .hotel-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .hotel-images img:first-child {
+    grid-row: span 2;
+  }
+  
+  .book-now-btn {
+    background: var(--Mint-Green, #8DD3BB);
+    color: black;
+    border: none;
+    padding: 11px 18px;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+    left: 1000px;
+    bottom: 37px;
+    transition: background 0.3s;
+  }
+  
+  .book-now-btn:hover {
+    background: #218838;
+  }
+
+  .star-rating1{
+    position: relative;
+    right: 376px;
+  }
+
+  .rating-box1{
+    border: 2px solid #90cea1;
+    border-radius: 5px;
+    padding: 5px 8px;
+  }
+  
+  .rating-text1{
+    font-weight: bold;
+    margin-left: 8px;
+  }
+
+  .heart1{
+    border: 2px solid #90cea1;
+    border-radius: 5px;
+    padding: 5px 8px;
+  }
+
+  .share{
+    border: 2px solid #90cea1;
+    border-radius: 5px;
+    padding: 5px 8px;
+  }
+
+  .share-heart{
+    position: relative;
+    left: 917px;
+    width: 79px;
+  } */
+
+
+
+
+/* Main Container */
+.booking-container { 
+    max-width: 1300px;
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+/* Header Section */
+.hotel-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.hotel-name {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.star-rating1 {
+    font-size: 20px;
+    margin-top: -5px;
+}
+
+.hotel-details {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.hotel-price {
+    font-size: 24px;
+    color: #ff5a5f;
+}
+
+/* Images Grid */
+.hotel-images {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.hotel-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.hotel-images img:first-child {
+    grid-row: span 2;
+}
+
+/* Buttons Container */
+.buttons-container {
+  position: relative; /* Change from absolute to relative */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 15px; /* Adjusted spacing */
+}
+
+/* Share & Heart Buttons */
+.share-heart {
+  display: flex;
+  gap: 8px;
+}
+
+.heart1, .share {
+  border: 2px solid #90cea1;
+  border-radius: 5px;
+  padding: 7px 8px;
+  background: white;
+  cursor: pointer;
+}
+
+/* Book Now Button */
+.book-now-btn {
+  background: var(--Mint-Green, #8DD3BB);
+  color: black;
+  border: none;
+  padding: 11px 20px;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.book-now-btn:hover {
+  background: #218838;
+}
+/* Review Box */
+.rating-box1 {
+    border: 2px solid #90cea1;
+    border-radius: 5px;
+    padding: 5px 8px;
+}
+
+.rating-text1 {
+    font-weight: bold;
+    margin-left: 8px;
+}
+
+/* 🔥 RESPONSIVE DESIGN 🔥 */
+
+/* 📱 Mobile View (Small Screens) */
+@media (max-width: 768px) {
+    .hotel-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hotel-name {
+        font-size: 22px;
+    }
+
+    .hotel-price {
+        font-size: 20px;
+    }
+
+    .hotel-details {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+
+    /* Mobile View Image Grid */
+    .hotel-images {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-container {
+        max-width: 100%;
+        width: 100%;
+        padding: 15px;
+    }
+}
+
+/* 📺 Tablet View */
+@media (max-width: 1024px) {
+    .hotel-header {
+        flex-wrap: wrap;
+    }
+
+    .hotel-details {
+        margin-top: 10px;
+    }
+
+    /* Tablet Image Grid */
+    .hotel-images {
+      grid-template-columns: 1fr 1fr; /* 2 columns instead of 3 */
+      gap: 8px; /* Reduce gap for better alignment */
+  }
+
+  .hotel-images img:first-child {
+      grid-row: span 1; /* Remove big image issue */
+  }
+  .hotel-images img:last-child {
+    display: none; /* Remove last image on smaller screens */
+}
+  .hotel-images img {
+    height: 220px; /* Adjust height to make all images equal */
+    object-fit: cover; /* Ensure images fill the box properly */
+}
+
+    /* Buttons Positioning */
+    .buttons-container {
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 8px;
+      margin-top: 10px;
+  }
+
+  .book-now-btn {
+      width: 100%;
+      text-align: center;
+  }
+
+    .booking-container {
+        max-width: 95%;
+        width: 95%;
+    }
+}
+
+
+
+

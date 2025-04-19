@@ -1,0 +1,71 @@
+.overview-container {
+    padding: 30px;
+    max-width: 1170px;
+    margin: auto;
+    font-family: 'Trebuchet MS', sans-serif;
+  }
+  
+  .haiding-overview{
+    font-size: 35px;
+    margin-bottom: 10px;
+  }
+
+
+  .reviewsection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+  }
+  
+  .reviewbox {
+    background: #d1e7dd;
+    padding: 20px;
+    border-radius: 12px;
+    min-width: 150px;
+    text-align: center;
+    flex: 1;
+  }
+  
+  .reviewbox h3 {
+    font-size: 28px; /* Increased size */
+    margin: 0;
+  }
+  
+  .ratingtext {
+    font-weight: bold;
+    color: #155724;
+    font-size: 20px;
+  }
+  
+  .reviewbox span {
+    font-size: 16px;
+  }
+  
+  .featurecard {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 12px;
+    min-width: 150px;
+    text-align: center;
+    flex: 1;
+    font-size: 18px;
+  }
+  
+  .featurecard span {
+    font-size: 22px;
+  }
+
+  @media (max-width: 600px) {
+    .reviewsection {
+      flex-direction: column;
+      align-items: center;
+      width: 94%;
+    }
+    .featurecard,
+    .reviewbox {
+      width: 100%;
+    }
+  }
+  
+  

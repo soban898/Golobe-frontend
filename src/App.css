@@ -1,0 +1,11 @@
+/* Ensure full width */
+* {
+    margin: 0;
+    padding: 0;
+
+  }
+  
+  body {
+    padding-top: 45px; /* Navbar ke neeche space dedo */
+}
+  

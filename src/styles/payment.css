@@ -1,0 +1,333 @@
+.Payment-container {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+  margin-bottom: 25px;
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+/* Left Section */
+.left-section {
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Room Box */
+.room-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.breadcrumb {
+  color: gray;
+  font-size: 14px;
+}
+
+.room-title {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.price {
+  color: red;
+  font-size: 24px;
+}
+
+.hotel-info {
+  margin-top: 10px;
+}
+
+.date-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Payment Box */
+.payment-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.option {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.option.selected {
+  background: var(--Mint-Green, #8DD3BB);
+}
+
+/* Right Section */
+.right-section {
+  width: 35%;
+}
+
+/* Booking Summary */
+.summary-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hotel Card */
+.hotel-cards {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.hotel-cards img {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+}
+
+.hotel-detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.hotel-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.hotel-rating {
+  font-size: 14px;
+  color: #666;
+}
+
+.price-details {
+  margin-top: 16px;
+  display: grid;
+  gap: 8px;
+}
+
+.price-details p {
+  display: flex;
+  justify-content: space-between;
+}
+
+.total {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+/* Payment Methods */
+.payment-methods {
+  margin-top: 20px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Saved Card */
+.saved-card {
+  background: #b7e3d8;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px;
+}
+
+.card-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-logo {
+  width: 40px;
+  height: 42px;
+}
+
+.expiry {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Add New Card */
+.add-card {
+  border: 2px dashed #b7e3d8;
+  padding: 20px;
+  margin-top: 10px;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.add-icon {
+  font-size: 24px;
+  font-weight: bold;
+  color: #666;
+}
+
+/* =========== Modal Overlay =========== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Dark overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* =========== Modal Box =========== */
+.modal-content {
+  background: white;
+  padding: 39px 58px;
+  border-radius: 10px;
+  width: 420px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* Form Inputs & Select */
+.input-field {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.select-field {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+/* Card Row (Expiry Date & CVC) */
+.card-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.card-row .input-field {
+  width: 100%;
+}
+
+/* Checkbox Label Alignment */
+.checkbox1 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Add Card Button */
+.add-card-btn {
+  width: 100%;
+  padding: 12px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.add-card-btn:hover {
+  background: #218838;
+}
+
+
+.login-box5 {
+  text-align: center;
+  padding: 40px;
+  border: 2px solid #eee;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.login-button5 {
+  padding: 10px 20px;
+  background-color: #0077ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+/* ===================== RESPONSIVENESS ===================== */
+@media (max-width: 1024px) {
+  .Payment-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .left-section, .right-section {
+    width: 100%;
+  }
+  .summary-box {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .room-box, .payment-box, .summary-box {
+    padding: 15px;
+  }
+
+  .date-info {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    width: 90%;
+    padding: 20px;
+  }
+  .card-row {
+    flex-direction: column;
+  }
+}
+
+
+
+

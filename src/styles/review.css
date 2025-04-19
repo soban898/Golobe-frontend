@@ -1,0 +1,109 @@
+.review-section {
+    max-width: 100%;
+  width: 85%;
+  margin: auto;
+    font-family: 'Trebuchet MS', sans-serif;
+  }
+  
+  .review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .review-button {
+    background: #57a773;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .review-button:hover {
+    background: #4a9065;
+  }
+  
+  .rating-summary {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .rating-summary h1 {
+    font-size: 36px;
+    margin-right: 10px;
+  }
+  
+  .review-list {
+    margin-top: 20px;
+  }
+  
+  .review-card {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 0;
+    position: relative;
+  }
+  
+  .review-user {
+    display: flex;
+    align-items: center;
+  }
+  
+  .review-user img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .review-rating {
+    font-weight: bold;
+  }
+  
+  .review-text {
+    flex: 1;
+    margin-left: 15px;
+    font-size: 14px;
+  }
+  
+  .flag-icon {
+    cursor: pointer;
+    color: #aaa;
+    position: absolute;
+    right: 10px;
+  }
+  
+  .pagination {
+    display: flex
+;
+    justify-content: center;
+    margin-bottom: 28px;
+    margin-top: 9px;
+  }
+  
+  .pagination span {
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .review-card {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .review-text {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+  
+    .flag-icon {
+      position: static;
+      align-self: flex-end;
+    }
+  }
+  

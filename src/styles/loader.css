@@ -1,0 +1,11 @@
+.text-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.load{
+    height: 70px;
+    width: 70px;
+}

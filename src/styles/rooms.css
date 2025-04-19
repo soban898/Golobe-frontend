@@ -1,0 +1,92 @@
+.rooms-container {
+    max-width: 1170px;
+    margin: auto;
+    padding: 20px;
+    font-family: 'Trebuchet MS', sans-serif;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Room Card */
+  .room-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
+  }
+  
+  /* Image */
+  .room-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  /* Room Info */
+  .room-info {
+    flex: 1;
+    font-size: 17px;
+    font-weight: 500;
+  }
+  
+  /* Price + Button */
+  .room-price {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  
+  .room-price p {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .book-btn {
+    background: #6fc2a8;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 5px;
+  }
+  
+  .book-btn:hover {
+    background: #5aa78f;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .room-card {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 15px;
+    }
+  
+    .room-image {
+      width: 100%;
+      height: auto;
+      max-width: 200px;
+    }
+  
+    .room-price {
+      text-align: left;
+      align-items: flex-start;
+      margin-top: 10px;
+    }
+  
+    .book-btn {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  

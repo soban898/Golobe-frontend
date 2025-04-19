@@ -1,0 +1,101 @@
+.travel-container1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch; /* Ensure equal height */
+    padding: 45px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+}
+
+.main-card1 {
+    flex: 1 1 400px;
+    background: var(--Mint-Green, #8DD3BB);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures content is spaced properly */
+    gap: 10px;
+    min-height: 300px; /* Yeh card ki height maintain karega */
+}
+
+.text-container {
+    flex-grow: 1; /* Ensures text stays on top */
+}
+
+.book-hotel-btn {
+    display: block;
+    width: 100%;
+    background: white;
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin-top: auto; /* Ensures button stays at the bottom */
+}
+
+
+.main-card1 h2 {
+    font-size: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-card1 p {
+    font-size: 15px;
+    line-height: 1.5;
+    padding-top: 5px; /* Thoda space h2 aur p ke beech */
+}
+
+.travel-description {
+    padding-top: 5px; /* Ensures proper spacing */
+}
+
+
+
+
+.book-hotel-btn:hover {
+    background: #0056b3;
+}
+
+.image-grid1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    flex: 1 1 400px;
+    align-items: stretch; /* Ensures equal height */
+}
+
+.image-grid1 img {
+    width: 100%;
+    height: 100%; /* Ensures images take full grid space */
+    object-fit: cover; /* Ensures image fits well */
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .travel-container1 {
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-card1 h2 {
+        font-size: 24px;
+    }
+    .main-card1 p {
+        font-size: 14px;
+        padding-top: 3px;
+    }
+}
+@media (max-width: 600px){
+    .image-grid1 {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,235 @@
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 20px; /* Andar ka spacing adjust */
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Shadow increase ki */
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+}
+
+  
+  .nav-left,
+  .nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px; /* Sirf andar ka spacing */
+  }
+  
+  .nav-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .nav-logo {
+    height: 30px;
+
+  }
+
+  .arrow{
+    position: relative;
+    left: 77px;
+  }
+  
+  .arrow-2{
+    position: relative;
+    left: 90px;
+  }
+  .arrow-3{
+    position: relative;
+    left: 100px;
+  }
+  .arrow-4{
+    position: relative;
+    left: 103px;
+  }
+  
+  .nav-icon {
+    height: 20px;
+  }
+  
+  .nav-profile {
+    display: flex
+    ;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        font-weight: bold;
+        position: relative;
+        right: 10px;
+  }
+  
+  .profile-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  
+  .nav-divider {
+    height: 20px;
+    width: 1px;
+    background-color: black;
+  }
+
+
+  @keyframes dropdownFade {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+      visibility: hidden;
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+      visibility: visible;
+    }
+  }
+
+
+  @keyframes dropdownFadeOut {
+    from { opacity: 1; transform: translateY(0); visibility: visible; }
+    to { opacity: 0; transform: translateY(-10px); visibility: hidden; }
+  }
+  
+  .login-btn {
+    background-color: #8DD3BB;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  .login-btn:hover {
+    background: #218838;
+  }
+  
+
+  /* Profile Dropdown Styling */
+  .dropdown-menu {
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    width: 220px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    animation: none;
+  }
+  
+  .dropdown-show {
+    animation: dropdownFade 0.3s ease-in-out forwards;
+  }
+
+
+  .dropdown-hide {
+    animation: dropdownFadeOut 0.3s ease-in-out forwards;
+  }
+
+  
+.dropdown-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.dropdown-profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.dropdown-name {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.dropdown-status {
+  font-size: 12px;
+  color: gray;
+}
+
+.dropdown-item {
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.2s;
+}
+
+.dropdown-item:hover {
+  background: #f5f5f5;
+}
+
+.logout {
+  color: red;
+  font-weight: bold;
+}
+
+
+
+/* Ensure navbar stays in one line on small screens */
+@media (max-width: 480px) {
+  .nav-item span, 
+  .nav-profile span {
+    font-size: 12px; /* Text size chhota karo */
+  }
+
+  .nav-icon {
+    height: 16px; /* Icons chhote karo */
+  }
+
+  .nav-logo {
+    height: 25px; /* Logo ka size reduce karo */
+  }
+
+  .profile-img {
+    width: 25px;
+    height: 25px; /* Profile image chhoti karo */
+  }
+
+  .nav-left, .nav-right {
+    gap: 8px; /* Elements ke darmiyan gap thoda kam karo */
+  }
+  .stays{
+    display: none;
+  }
+  .nav-divider{
+    position: relative;
+    right: 5px;
+  }
+
+}
+
+
+/* @media (max-width: 540px){
+  .navbar{
+    padding: 10px 7px;
+  }
+} */

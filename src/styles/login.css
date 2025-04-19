@@ -1,0 +1,249 @@
+
+.login-container {
+  display: flex;
+  height: 100vh;
+  font-family: 'Trebuchet MS', sans-serif;
+  position: relative;
+}
+
+/* 🌟 Logo Wrapper */
+.login-header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.login-logo {
+  width: 120px;
+}
+
+/* 🌟 Left Side - Login Form */
+.login-form {
+  flex: 1;
+  max-width: 500px;
+  margin: auto;
+  padding: 2rem;
+  text-align: left;
+}
+
+/* 🌟 Headings */
+.login-heading {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center; /* Center aligned */
+  margin-top: -10px; /* Thoda upar shift */
+  margin-bottom: 5px; /* Thoda adjust */
+}
+
+.login-subtext {
+  font-size: 14px;
+  color: #666;
+  text-align: center; /* Center aligned */
+  margin-bottom: 20px; /* Thoda aur spacing */
+}
+
+/* 🌟 Form */
+.login-form-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Labels */
+.login-label {
+  font-size: 14px;
+  margin: 10px 0 5px;
+}
+
+/* 🌟 Input Fields */
+.login-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* 🌟 Password Field with Eye Icon */
+.password-container {
+  position: relative;
+  width: 100%;
+}
+
+.password-container .login-input {
+  padding-right: 40px;
+}
+
+.eye-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.eye-icon1,
+.eye-icon2 {
+  position: relative;
+  left: calc(100% - 24px);
+  top: -30px;
+  cursor: pointer;
+  font-size: 17px;
+  z-index: 1;
+}
+
+.success-error{
+  color: lightgreen;
+}
+
+/* 🌟 Options Row (Remember Me & Forgot Password) */
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.remember-me {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.forgot-password {
+  color: #ff6b6b;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+/* 🌟 Login Button */
+.login-btn {
+  width: 100%;
+  padding: 10px;
+  background: #6abc8c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.login-btn:hover {
+  background: #5da37a;
+}
+
+/* 🌟 Signup Text */
+.signup-text {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.signup-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+/* 🌟 OR Login With */
+.or-login {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* 🌟 Social Login */
+.social-login {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+/* Social Buttons */
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.social-btn img {
+  width: 24px;
+  height: 24px;
+}
+
+.social-btn:hover {
+  background: #f1f1f1;
+}
+
+/* 🌟 Right Side - Image */
+.login-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background-image {
+  width: 90%;
+  height: 80vh;
+  object-fit: cover;
+  margin-bottom: 43px;
+  border-radius: 15px;
+}
+
+
+.confirmation-box {
+  text-align: center;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.success-icon {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.confirmation-heading {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+
+.confirmation-text {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+  width: 319px;
+  margin-left: 68px;
+}
+
+.error-message{
+  color: red;
+}
+
+
+/* 🌟 Responsive - Hide Image on Smaller Screens */
+@media (max-width: 1024px) {
+  .login-image {
+    display: none;
+  }
+
+  .login-form {
+    max-width: 100%;
+  }
+}
