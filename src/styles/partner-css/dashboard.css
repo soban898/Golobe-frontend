@@ -1,0 +1,52 @@
+.partner-dashboard199 {
+  padding: 30px;
+}
+
+.dashboard-cards199 {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card199 {
+  flex: 1;
+  min-width: 220px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card199 h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card199 p {
+  font-size: 26px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.dashboard-header199 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.refresh-button199 {
+  background-color: #1e88e5;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.refresh-button199:hover {
+  background-color: #1565c0;
+}

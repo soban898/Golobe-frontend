@@ -1,0 +1,73 @@
+.partner-container10 {
+  display: flex;
+  height: 100vh;
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+/* 🌟 Sidebar */
+.sidebar10 {
+  width: 250px;
+  background: white; /* Default white background */
+  border-right: 1px solid #ccc; /* Gray border */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+}
+
+.sidebar-heading10 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #2e7d32;
+}
+
+/* 🌟 Nav List */
+.nav-list10 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item10 {
+  padding: 10px 16px;
+  margin-bottom: 12px;
+  background: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-item10:hover {
+  background: #5da37a;
+  color: white;
+  border-color: #5da37a;
+  font-weight: bold;
+  transform: scale(1.03);
+}
+
+/* 🌟 Logout Special Style */
+.logout10 {
+  background: #ffe5e5;
+  color: #c62828;
+  border-color: #f1bdbd;
+}
+
+.logout10:hover {
+  background: #c62828;
+  color: white;
+  border-color: #c62828;
+}
+
+/* 🌟 Main Content */
+.content10 {
+  flex: 1;
+  padding: 43px;
+  overflow-y: auto;
+
+}

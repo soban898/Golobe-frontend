@@ -1,0 +1,40 @@
+.bookings-wrapper {
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.bookings-title {
+  margin-bottom: 1rem;
+  font-size: 24px;
+  color: #333;
+}
+
+.bookings-empty {
+  text-align: center;
+  padding: 3rem 1rem;
+  font-size: 16px;
+  color: #666;
+}
+
+.bookings-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.bookings-table th,
+.bookings-table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.bookings-table th {
+  background-color: #f8f8f8;
+  font-weight: bold;
+}

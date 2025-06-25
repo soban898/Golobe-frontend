@@ -247,3 +247,26 @@
     max-width: 100%;
   }
 }
+
+
+
+
+
+.role-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+.role-toggle button {
+  padding: 8px 14px;
+  border: 1px solid #ccc;
+  background: #f2f2f2;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.role-toggle .active {
+  background-color: #5da37a;
+  color: white;
+  border-color: #5da37a;
+}

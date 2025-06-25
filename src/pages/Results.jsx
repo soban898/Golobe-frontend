@@ -4,7 +4,7 @@ import ResultList from "../components/Results/ResultList";
 
 const Results = () => {
   return (
-    <div>
+    <div className='b-c'>
       <SearchBox isResultsPage={true} /> {/* ✅ Prop bhej rahe hain */}
       <ResultList />
     </div>

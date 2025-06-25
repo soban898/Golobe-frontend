@@ -3,7 +3,7 @@ import PaymentMethod from '../components/Payment/PaymentMethod'
 
 const Payment = () => {
   return (
-    <div>
+    <div className='b-c'>
       <PaymentMethod/>
     </div>
   )

@@ -211,6 +211,13 @@
   transition: background 0.3s;
 }
 
+.book-now-btn-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+
 .book-now-btn:hover {
   background: #218838;
 }
@@ -225,6 +232,15 @@
     font-weight: bold;
     margin-left: 8px;
 }
+
+
+.hotel-location {
+  font-size: 16px;
+  color: #555;
+  margin-top: -10px;
+  margin-bottom: 8px;
+}
+
 
 /* 🔥 RESPONSIVE DESIGN 🔥 */
 

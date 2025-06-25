@@ -6,7 +6,7 @@ import City from '../components/Landing/City'
 import TravelCardGrid from '../components/Landing/CardGrid'
 const Landing = () => {
   return (
-    <div>
+    <div className='b-c'>
       <HeroSection/>
       <Searchbox/>
       <Recent/>

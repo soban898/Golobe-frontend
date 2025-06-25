@@ -1,21 +1,24 @@
-import React from 'react'
-import { useLocation } from "react-router-dom";
-import Navbar from './Navbar'
-import Footer from './Footer'
+import React from "react";
+import { Outlet, useLocation } from "react-router-dom";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
-const Layout = ({children}) => {
+const Layout = () => {
   const location = useLocation();
-  
-  // Check if the current route is login or signup
-  const hideLayout = location.pathname === "/login" || location.pathname === "/signup"  || location.pathname === "/reset";
+
+  // Routes where layout (Navbar & Footer) should be hidden
+  const hiddenRoutes = ["/login", "/signup", "/reset"];
+  const shouldHideLayout = hiddenRoutes.includes(location.pathname);
 
   return (
     <>
-      {!hideLayout && <Navbar />}
-      {children}
-      {!hideLayout && <Footer />}
+      {!shouldHideLayout && <Navbar />}
+      <main>
+        <Outlet />
+      </main>
+      {!shouldHideLayout && <Footer />}
     </>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

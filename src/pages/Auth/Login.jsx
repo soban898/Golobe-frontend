@@ -140,6 +140,279 @@
 
 
 
+// import React, { useState } from "react";
+// import axios from "axios";
+// import "../../styles/login.css";
+// import logo from "../../assets/img/Logo.png";
+// import LoginImage from "../../assets/img/LoginImage.png";
+// import Fb from "../../assets/img/Fb.svg";
+// import google from "../../assets/img/google.svg";
+// import apple from "../../assets/img/apple.svg";
+// import { FaEye, FaEyeSlash } from "react-icons/fa";
+// import { useNavigate } from "react-router-dom";
+
+// const Login = () => {
+//   const [email, setEmail] = useState("");
+//   const [password, setPassword] = useState("");
+//   const [showPassword, setShowPassword] = useState(false);
+//   const [errorMessage, setErrorMessage] = useState("");
+
+//   const navigate = useNavigate();
+
+//   const submitHandler = async (event) => {
+//     event.preventDefault();
+//     setErrorMessage("");
+
+//     if (!email.trim()) {
+//       setErrorMessage("Email is required.");
+//       return;
+//     }
+
+//     if (!password.trim()) {
+//       setErrorMessage("Password is required.");
+//       return;
+//     }
+
+//     try {
+//       const res = await axios.post("http://localhost:5000/api/users/login", {
+//         email,
+//         password,
+//       });
+
+//       const data = res.data;
+
+//       // Save JWT Token to localStorage
+//       localStorage.setItem("token", data.token);
+
+//       console.log("Login successful:", data);
+//       navigate("/");
+//     } catch (error) {
+//       const message = error.response?.data?.message || "Login failed. Please try again.";
+//       setErrorMessage(message);
+//       console.error("Login Error:", message);
+//     }
+//   };
+
+//   return (
+//     <div className="login-container">
+//       <div className="login-header">
+//         <img src={logo} alt="Golobe Logo" className="login-logo" />
+//       </div>
+
+//       <div className="login-form">
+//         <h2 className="login-heading">Login</h2>
+//         <p className="login-subtext">Login to access your Golobe account</p>
+
+//         <form className="login-form-content" onSubmit={submitHandler}>
+//           <label className="login-label">Email</label>
+//           <input
+//             value={email}
+//             onChange={(e) => setEmail(e.target.value)}
+//             type="email"
+//             placeholder="john.doe@gmail.com"
+//             required
+//             className="login-input"
+//           />
+
+//           <label className="login-label">Password</label>
+//           <div className="password-container">
+//             <input
+//               value={password}
+//               onChange={(e) => setPassword(e.target.value)}
+//               type={showPassword ? "text" : "password"}
+//               placeholder="Password"
+//               required
+//               className="login-input"
+//             />
+//             <span onClick={() => setShowPassword(!showPassword)}>
+//               {showPassword ? <FaEyeSlash className="eye-icon" /> : <FaEye className="eye-icon" />}
+//             </span>
+//           </div>
+
+//           <div className="login-options">
+//             <label className="remember-me">
+//               <input type="checkbox" /> Remember me
+//             </label>
+//             <a href="/reset" className="forgot-password">Forgot Password</a>
+//           </div>
+
+//           {errorMessage && <p className="error-message">{errorMessage}</p>}
+
+//           <button type="submit" className="login-btn">Login</button>
+
+//           <p className="signup-text">
+//             Don’t have an account? <a href="/signup" className="signup-link">Sign up</a>
+//           </p>
+
+//           <p className="or-login">Or login with</p>
+
+//           <div className="social-login">
+//             <div className="social-btn">
+//               <img src={Fb} alt="Facebook" />
+//             </div>
+//             <div className="social-btn">
+//               <img src={google} alt="Google" />
+//             </div>
+//             <div className="social-btn">
+//               <img src={apple} alt="Apple" />
+//             </div>
+//           </div>
+//         </form>
+//       </div>
+
+//       <div className="login-image">
+//         <img src={LoginImage} alt="Resort" className="background-image" />
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Login;
+
+
+
+// import React, { useState } from "react";
+// import axios from "axios";
+// import "../../styles/login.css";
+// import logo from "../../assets/img/Logo.png";
+// import LoginImage from "../../assets/img/LoginImage.png";
+// import Fb from "../../assets/img/Fb.svg";
+// import google from "../../assets/img/google.svg";
+// import apple from "../../assets/img/apple.svg";
+// import { FaEye, FaEyeSlash } from "react-icons/fa";
+// import { useNavigate } from "react-router-dom";
+
+// const Login = () => {
+//   const [email, setEmail] = useState("");
+//   const [password, setPassword] = useState("");
+//   const [showPassword, setShowPassword] = useState(false);
+//   const [errorMessage, setErrorMessage] = useState("");
+//   const [role, setRole] = useState("user"); // ✅ Role state
+
+//   const navigate = useNavigate();
+
+//   const submitHandler = async (event) => {
+//     event.preventDefault();
+//     setErrorMessage("");
+
+//     if (!email.trim()) return setErrorMessage("Email is required.");
+//     if (!password.trim()) return setErrorMessage("Password is required.");
+
+//     try {
+//       const res = await axios.post("http://localhost:5000/api/users/login", {
+//         email,
+//         password,
+//         role,
+//       });
+
+//       const { token, role: userRole } = res.data;
+
+//       localStorage.setItem("token", token);
+//       localStorage.setItem("role", userRole);
+
+      
+//       if (userRole === "partner") {
+//         navigate("/partner/dashboard");
+//       } else {
+//         navigate("/");
+//       }
+//     } catch (error) {
+//       const msg = error.response?.data?.message || "Login failed. Please try again.";
+//       setErrorMessage(msg);
+//     }
+//   };
+
+//   return (
+//     <div className="login-container">
+//       <div className="login-header">
+//         <img src={logo} alt="Golobe Logo" className="login-logo" />
+//       </div>
+
+//       <div className="login-form">
+//         <h2 className="login-heading">Login</h2>
+//         <p className="login-subtext">Login to access your Golobe account</p>
+
+  
+//         <div className="role-toggle">
+//           <button
+//             type="button"
+//             className={role === "user" ? "active" : ""}
+//             onClick={() => setRole("user")}
+//           >
+//             Login as User
+//           </button>
+//           <button
+//             type="button"
+//             className={role === "partner" ? "active" : ""}
+//             onClick={() => setRole("partner")}
+//           >
+//             Login as Partner
+//           </button>
+//         </div>
+
+//         <form className="login-form-content" onSubmit={submitHandler}>
+//           <label className="login-label">Email</label>
+//           <input
+//             value={email}
+//             onChange={(e) => setEmail(e.target.value)}
+//             type="email"
+//             placeholder="john.doe@gmail.com"
+//             required
+//             className="login-input"
+//           />
+
+//           <label className="login-label">Password</label>
+//           <div className="password-container">
+//             <input
+//               value={password}
+//               onChange={(e) => setPassword(e.target.value)}
+//               type={showPassword ? "text" : "password"}
+//               placeholder="Password"
+//               required
+//               className="login-input"
+//             />
+//             <span onClick={() => setShowPassword(!showPassword)}>
+//               {showPassword ? <FaEyeSlash className="eye-icon" /> : <FaEye className="eye-icon" />}
+//             </span>
+//           </div>
+
+//           <div className="login-options">
+//             <label className="remember-me">
+//               <input type="checkbox" /> Remember me
+//             </label>
+//             <a href="/reset" className="forgot-password">Forgot Password</a>
+//           </div>
+
+//           {errorMessage && <p className="error-message">{errorMessage}</p>}
+
+//           <button type="submit" className="login-btn">Login</button>
+
+//           <p className="signup-text">
+//             Don’t have an account? <a href="/signup" className="signup-link">Sign up</a>
+//           </p>
+
+//           <p className="or-login">Or login with</p>
+
+//           <div className="social-login">
+//             <div className="social-btn"><img src={Fb} alt="Facebook" /></div>
+//             <div className="social-btn"><img src={google} alt="Google" /></div>
+//             <div className="social-btn"><img src={apple} alt="Apple" /></div>
+//           </div>
+//         </form>
+//       </div>
+
+//       <div className="login-image">
+//         <img src={LoginImage} alt="Resort" className="background-image" />
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Login;   
+
+
+
+
 import React, { useState } from "react";
 import axios from "axios";
 import "../../styles/login.css";
@@ -156,6 +429,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+  const [role, setRole] = useState("user"); // ✅ Role state
 
   const navigate = useNavigate();
 
@@ -163,33 +437,32 @@ const Login = () => {
     event.preventDefault();
     setErrorMessage("");
 
-    if (!email.trim()) {
-      setErrorMessage("Email is required.");
-      return;
-    }
-
-    if (!password.trim()) {
-      setErrorMessage("Password is required.");
-      return;
-    }
+    if (!email.trim()) return setErrorMessage("Email is required.");
+    if (!password.trim()) return setErrorMessage("Password is required.");
 
     try {
       const res = await axios.post("http://localhost:5000/api/users/login", {
         email,
         password,
+        role,
       });
 
-      const data = res.data;
+      // ✅ Destructure and store in localStorage
+      const { token, role: userRole, user } = res.data;
 
-      // Save JWT Token to localStorage
-      localStorage.setItem("token", data.token);
+      localStorage.setItem("token", token);
+      localStorage.setItem("role", userRole);
+      localStorage.setItem("user", JSON.stringify(user)); // ✅ Added line
 
-      console.log("Login successful:", data);
-      navigate("/");
+      // ✅ Redirect based on role
+      if (userRole === "partner") {
+        navigate("/partner/dashboard");
+      } else {
+        navigate("/");
+      }
     } catch (error) {
-      const message = error.response?.data?.message || "Login failed. Please try again.";
-      setErrorMessage(message);
-      console.error("Login Error:", message);
+      const msg = error.response?.data?.message || "Login failed. Please try again.";
+      setErrorMessage(msg);
     }
   };
 
@@ -202,6 +475,24 @@ const Login = () => {
       <div className="login-form">
         <h2 className="login-heading">Login</h2>
         <p className="login-subtext">Login to access your Golobe account</p>
+
+        {/* Role toggle */}
+        <div className="role-toggle">
+          <button
+            type="button"
+            className={role === "user" ? "active" : ""}
+            onClick={() => setRole("user")}
+          >
+            Login as User
+          </button>
+          <button
+            type="button"
+            className={role === "partner" ? "active" : ""}
+            onClick={() => setRole("partner")}
+          >
+            Login as Partner
+          </button>
+        </div>
 
         <form className="login-form-content" onSubmit={submitHandler}>
           <label className="login-label">Email</label>
@@ -247,15 +538,9 @@ const Login = () => {
           <p className="or-login">Or login with</p>
 
           <div className="social-login">
-            <div className="social-btn">
-              <img src={Fb} alt="Facebook" />
-            </div>
-            <div className="social-btn">
-              <img src={google} alt="Google" />
-            </div>
-            <div className="social-btn">
-              <img src={apple} alt="Apple" />
-            </div>
+            <div className="social-btn"><img src={Fb} alt="Facebook" /></div>
+            <div className="social-btn"><img src={google} alt="Google" /></div>
+            <div className="social-btn"><img src={apple} alt="Apple" /></div>
           </div>
         </form>
       </div>
@@ -268,20 +553,3 @@ const Login = () => {
 };
 
 export default Login;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
